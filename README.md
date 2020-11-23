@@ -1,7 +1,5 @@
 # Desktop Tomato Timer
 
-Tomato timer outside the browser! 
-
 Time yourself ⏳ &nbsp; Take Breaks 🍳 &nbsp; Focus 🙇‍♂️
 
 Tomato Timer is a flexible and easy to use online Pomodoro Technique Timer.

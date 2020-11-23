@@ -1,0 +1,62 @@
+#:kivy 1.0.9
+#:import hex kivy.utils.get_color_from_hex
+
+<ControlButton>:
+    font_size: 15
+    size: self.width, 30
+    center_x: 75
+    background_color: hex('#03A9F4')
+    color: 1,1,1,1
+
+<Timer>:
+    start_button: start_button
+    stop_button: stop_button
+
+    canvas:
+        Color:
+            rgb: hex("#ffffff")
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        color: 0,0,0,.6
+        font_size: 35
+        center_x: root.center_x
+        top: 260
+        text: root.time
+
+    ControlButton:
+        id: start_button
+        text: "Start"
+        on_press: root.start_timer()
+        top: 170
+        background_color: hex('#D44D5C')
+        
+    ControlButton:
+        id: long_break
+        text: "Long break"
+        top: 130
+        on_press: root.start_timer(60 * 15)
+        background_color: hex('#004346')
+
+    ControlButton:
+        id: Short_break
+        text: "Short break"
+        top: 90
+        on_press: root.start_timer(60 * 5)
+        background_color: hex('#4056F4')
+
+    ControlButton:
+        id: stop_button
+        text: "Reset"
+        top: 50
+        on_press: root.stop_timer()
+        background_color: hex('#22181C')
+
+
+
+    
+        
+        
